@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/flowershop",
         "index": "apps/flowershop/src/index.html",
@@ -18,7 +20,10 @@
           "apps/flowershop/src/favicon.ico",
           "apps/flowershop/src/assets"
         ],
-        "styles": ["apps/flowershop/src/styles.scss"],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/flowershop/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -83,7 +88,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/flowershop"],
+      "outputs": [
+        "coverage/apps/flowershop"
+      ],
       "options": {
         "jestConfig": "apps/flowershop/jest.config.ts",
         "passWithNoTests": true
