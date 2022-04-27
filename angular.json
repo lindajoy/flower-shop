@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "features-flowers": "libs/features/flowers",
+    "features-users": "libs/features/users",
     "flowershop": "apps/flowershop",
     "flowershop-e2e": "apps/flowershop-e2e"
   }

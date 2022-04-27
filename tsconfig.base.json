@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@flower-shop/features/flowers": ["libs/features/flowers/src/index.ts"],
+      "@flower-shop/features/users": ["libs/features/users/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
