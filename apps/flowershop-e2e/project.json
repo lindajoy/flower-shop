@@ -1,0 +1,28 @@
+{
+  "root": "apps/flowershop-e2e",
+  "sourceRoot": "apps/flowershop-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/flowershop-e2e/cypress.json",
+        "devServerTarget": "flowershop:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "flowershop:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/flowershop-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["flowershop"]
+}

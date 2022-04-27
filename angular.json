@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "flowershop": "apps/flowershop",
+    "flowershop-e2e": "apps/flowershop-e2e"
+  }
+}

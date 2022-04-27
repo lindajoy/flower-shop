@@ -1,0 +1,94 @@
+{
+  "projectType": "application",
+  "root": "apps/flowershop",
+  "sourceRoot": "apps/flowershop/src",
+  "prefix": "flower-shop",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/flowershop",
+        "index": "apps/flowershop/src/index.html",
+        "main": "apps/flowershop/src/main.ts",
+        "polyfills": "apps/flowershop/src/polyfills.ts",
+        "tsConfig": "apps/flowershop/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/flowershop/src/favicon.ico",
+          "apps/flowershop/src/assets"
+        ],
+        "styles": ["apps/flowershop/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/flowershop/src/environments/environment.ts",
+              "with": "apps/flowershop/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "flowershop:build:production"
+        },
+        "development": {
+          "browserTarget": "flowershop:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "flowershop:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/flowershop/**/*.ts",
+          "apps/flowershop/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/flowershop"],
+      "options": {
+        "jestConfig": "apps/flowershop/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
