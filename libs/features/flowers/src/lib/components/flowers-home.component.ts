@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 
 
+
 @Component({
   selector: 'flower-shop-home-page',
   templateUrl: './flowers-home.component.html',
@@ -10,8 +11,7 @@ import { DataService } from '../services/data.service';
 })
 export class FlowersHomeComponent implements OnInit {
 
-  roses:any = [];
-
+  flowers:any = [];
   constructor(private _router$$: Router,
               private _flowerService: DataService) {}
 
@@ -22,7 +22,7 @@ export class FlowersHomeComponent implements OnInit {
 
   showMeFlowers()
   {
-    return this._flowerService.getFlowers().subscribe(p =>{ this.roses = p})
+    return this._flowerService.getFlowers().subscribe(flowers =>{ this.flowers = flowers})
   }
 
   goToDetail(flowerId: string) 

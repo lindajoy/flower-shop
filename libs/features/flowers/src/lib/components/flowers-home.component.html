@@ -5,13 +5,12 @@
 </mat-toolbar>
 
 <div class="page" fxLayout="row wrap" fxLayoutGap="50" fxlayoutAlign="center center">
-    <div class="mat-card-div" *ngFor="let rose of roses" fxFlex="25%">
-        <mat-card (click)="goToDetail(rose.id)">
-            <img [src]="rose.imageSource">
-    
+    <div class="mat-card-div" *ngFor="let flower of flowers" fxFlex="25%">
+        <mat-card (click)="goToDetail(flower.id)">
+            <img [src]="flower.imageSource">
             <div class="details">
                 <p class="title">
-                    {{rose.name}}
+                    {{flower.name}}
                 </p>
             </div>
         </mat-card>
