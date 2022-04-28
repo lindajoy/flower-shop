@@ -15,6 +15,24 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@iote/external/iote/bricks": [
+        "libs/external/iote/bricks/src/index.ts"
+      ],
+      "@iote/external/iote/bricks-angular": [
+        "libs/external/iote/bricks-angular/src/index.ts"
+      ],
+      "@iote/external/iote/cqrs": [
+        "libs/external/iote/cqrs/src/index.ts"
+      ],
+      "@iote/external/iote/exceptions": [
+        "libs/external/iote/exceptions/src/index.ts"
+      ],
+      "@iote/external/iote/local-persistance": [
+        "libs/external/iote/local-persistance/src/index.ts"
+      ],
+      "@iote/external/iote/state": [
+        "libs/external/iote/state/src/index.ts"
+      ],
       "@flower-shop/features/flowers": ["libs/features/flowers/src/index.ts"],
       "@flower-shop/features/users": ["libs/features/users/src/index.ts"]
     }

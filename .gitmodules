@@ -1,0 +1,3 @@
+[submodule "ngsolid-mono"]
+	path = libs/external
+	url = https://github.com/iote/ngsolid-mono

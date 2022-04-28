@@ -1,6 +1,12 @@
 {
   "version": 2,
   "projects": {
+    "external-iote-bricks": "libs/external/iote/bricks",
+    "@iote-bricks-angular": "libs/external/iote/bricks-angular",
+    "external-iote-cqrs": "libs/external/iote/cqrs",
+    "external-iote-exceptions": "libs/external/iote/exceptions",
+    "external-iote-local-persistance": "libs/external/iote/local-persistance",
+    "external-iote-state": "libs/external/iote/state",
     "features-flowers": "libs/features/flowers",
     "features-users": "libs/features/users",
     "flowershop": "apps/flowershop",
