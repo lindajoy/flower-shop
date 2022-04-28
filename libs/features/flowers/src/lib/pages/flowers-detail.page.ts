@@ -21,13 +21,16 @@ export class FlowersDetailsComponent implements OnInit {
 
   ngOnInit() 
   {
+
     this.flowerId = this._router$$.url.split('/')[2];
+    const quantity = 12;
+    this._flowerService.getFlowerPricesBelowTenEuros(quantity).subscribe(this.flower)
 
     if(this.flowerId)
     {
       this._flowerService.getFlowerById(this.flowerId).subscribe(flower => {
           this.flower = flower;
-          console.log(this.flower)
+          // console.log(this.flower)
         });
     }
    
