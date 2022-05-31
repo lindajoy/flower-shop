@@ -1,8 +1,34 @@
 {
   "version": 2,
   "projects": {
-    "external-iote-bricks": "libs/external/iote/bricks",
     "@iote-bricks-angular": "libs/external/iote/bricks-angular",
+    "external-iote-bricks": "libs/external/iote/bricks",
+    "external-iote-bricks-angular": {
+      "projectType": "library",
+      "root": "libs/external/iote/bricks-angular",
+      "sourceRoot": "libs/external/iote/bricks-angular/src",
+      "prefix": "flower-shop",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/external/iote/bricks-angular"],
+          "options": {
+            "jestConfig": "libs/external/iote/bricks-angular/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/external/iote/bricks-angular/**/*.ts",
+              "libs/external/iote/bricks-angular/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
     "external-iote-cqrs": "libs/external/iote/cqrs",
     "external-iote-exceptions": "libs/external/iote/exceptions",
     "external-iote-local-persistance": "libs/external/iote/local-persistance",
