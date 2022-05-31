@@ -15,6 +15,7 @@ export class FlowersDetailsComponent implements OnInit {
   flowerId = '';
 
   flower:any;
+  isLoaded = false;
 
   constructor(private _router$$: Router,
               private _flowerService: DataService) {}
@@ -24,12 +25,14 @@ export class FlowersDetailsComponent implements OnInit {
 
     this.flowerId = this._router$$.url.split('/')[2];
     const quantity = 12;
-    this._flowerService.getFlowerPricesBelowTenEuros(quantity).subscribe(this.flower)
+    // this._flowerService.getFlowerPricesBelowTenEuros(quantity).subscribe(this.flower)
 
     if(this.flowerId)
     {
       this._flowerService.getFlowerById(this.flowerId).subscribe(flower => {
           this.flower = flower;
+
+          this.isLoaded = true;
           // console.log(this.flower)
         });
     }

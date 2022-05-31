@@ -3,7 +3,7 @@
     <span>{{ this.flowerId }}</span>
 </mat-toolbar>
 
-<div class="page">
+<div class="page" *ngIf="isLoaded">
     <mat-card class="inner-page" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="100px">
         <div fxFlex="50%">
             <img [src]="flower.imageSource" alt="">
@@ -36,4 +36,6 @@
             </div>
         </div>
     </mat-card>
+
+    <flower-shop-price></flower-shop-price>
 </div>

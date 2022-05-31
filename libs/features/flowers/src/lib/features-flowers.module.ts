@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FlowersDetailsComponent } from './pages/flowers-detail.page';
+import { FlowersPriceComponent } from './flower-price/flowers-price.page';
 
 
 const routes: Routes = [
@@ -26,6 +27,6 @@ const routes: Routes = [
     MatCardModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ FlowersHomeComponent, FlowersDetailsComponent],
+  declarations: [ FlowersHomeComponent, FlowersDetailsComponent, FlowersPriceComponent ],
 })
 export class FeaturesFlowersModule {}
