@@ -8,6 +8,10 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
  *  This means that the instance of this piece of state should live on a higher level, than the components that want to consume it.
  */
 
+/**
+ *  When reading from http, you will use the get method that returns a promise.
+ */
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,7 +25,7 @@ export class DataService {
    public getFlowers()
    {
      return this.store.collection('categories').valueChanges();
-   }
+   } 
 
    //gets the flower by ID
    public getFlowerById(flowerId: string) {
@@ -29,9 +33,10 @@ export class DataService {
    }
   
    //queries the collection and returns the result
-   public getFlowerPricesBelowTenEuros(quantity:number)
-   {
-     return this.store.collectionGroup('categories', ref => ref.where('quantity','==', quantity)).valueChanges();
-   }
-}
+//    public getFlowerPricesBelowTenEuros(quantity:number)
+//    {
+//      return this.store.collectionGroup('categories', ref => ref.where('quantity','==', quantity)).valueChanges();
+//    }
+// }
 
+  }
